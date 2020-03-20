@@ -1,0 +1,67 @@
+<head>
+    <title>Tugas Form</title>
+</head>
+<style>
+    .button{
+        background-color: #e74c3c;
+        border-radius: 10px;
+        padding: 7px;
+        width: 90px;
+        color: white;
+        box-shadow: whitesmoke;
+        font-weight: bold;
+    }
+</style>
+<body>
+    <form>
+        <h2 style="text-align: center;">Tugas Form</h2>
+        <table cellpadding="5px" align="center">
+            <tr>
+                <td>Username</td>
+                <td>:</td>
+                <td><input type="text" name="username" placeholder="Username"></td>
+            </tr>
+            <tr>
+                <td>Password</td>
+                <td>:</td>
+                <td><input type="password" name="password" placeholder="Password"></td>
+            </tr>
+            <tr>
+                <td>Gender</td>
+                <td>:</td>
+                <td><input type="radio" name="gender" value="M">Male<input type="radio" name="gender" value="F">Female</td>
+            </tr>
+            <tr>
+                <td>Hobby</td>
+                <td>:</td>
+                <td>
+                    <input type="checkbox" name="hobby" value="coding">Coding
+                    <input type="checkbox" name="hobby" value="Design">Design
+                </td>
+            </tr>
+            <tr>
+                <td>Combo Box</td>
+                <td>:</td>
+                <td>
+                    <select>
+                        <option value="bali">Bali</option>
+                        <option value="yogya">Yogyakarta</option>
+                        <option value="jakarta">Jakarta</option>
+                        <option value="lombok">Lombok</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Textarea</td>
+                <td>:</td>
+                <td><textarea name= "keterangan"cols="25" rows="8" placeholder="Keterangan"></textarea></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td><input type="submit" class="button"></td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
