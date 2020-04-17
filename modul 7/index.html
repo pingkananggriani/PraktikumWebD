@@ -1,0 +1,106 @@
+<html>
+    <head>
+        <title>Calculator</title>
+    </head>
+    <style>
+        *{
+            background-color: #808080;
+        }
+        .title{
+            font-size: 40px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .form_operasi{
+            height: 40px;
+            width: 350px;
+            font-size: 25px;
+            font-weight: bold;
+            padding: 10px 5px 10px 5px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #636e72;
+            background-color: #FFFFFF;
+        }
+        .form_hasil{
+            height: 40px;
+            width: 350px;
+            font-size: 25px;
+            font-weight: bold;
+            padding: 10px 5px 10px 5px;
+            margin-top: 5px;
+            border-radius: 5px;
+            background-color: #dfe6e9;
+            border: 1px solid #636e72;
+        }
+        .button{
+            height: 40px;
+            width: 81px;
+            background-color: #000000;
+            color: #FFFFFF;
+            font-size: 20px;
+            font-weight: bold;
+            border: 0px;
+            border-radius: 5px;
+            margin: 10px 5px 0px 0px;
+        }
+
+    </style>
+    <body>
+        <table align="center" style="margin-top: 250px; font-weight: bold;">
+            <tr>
+                <td></td>
+                <td><div class="title">Calculator</div></td>
+            </tr>
+            <tr>
+                <td>Input Bilangan 1</td>
+                <td><input type="number" class="form_operasi" id="bil1"></td>
+            </tr>
+            <tr>
+                <td>Input Bilangan 2</td>
+                <td><input type="number" class="form_operasi" id="bil2"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td>
+                    <button class="button" onclick="return kalkulator(1)">+</button>
+                    <button class="button" onclick="return kalkulator(2)">-</button>
+                    <button class="button" onclick="return kalkulator(3)">*</button>
+                    <button class="button" onclick="return kalkulator(4)">/</button>
+                </td>
+            </tr>
+            <tr>
+                <td style="font-size: 25px">Hasil</td>
+                <td><input type="text" readonly class="form_hasil" id="hasil"></td>
+            </tr>
+        </table>
+        <script language="javascript" type="text/javascript">
+            function kalkulator(operasi)
+            {
+                var bil1    = parseFloat(document.getElementById("bil1").value);
+                var bil2    = parseFloat(document.getElementById("bil2").value);
+                var total;
+                if(isNaN(bil1) || isNaN(bil2))
+                {
+                    alert("Tolong isi bilangan!");
+                }
+                switch(operasi)
+                {
+                    case 1:
+                        total = bil1+bil2;
+                        break;
+                    case 2:
+                        total = bil1-bil2;
+                        break;
+                    case 3:
+                        total = bil1*bil2;
+                        break;
+                    case 4:
+                        total = bil1/bil2;
+                        break;
+                }
+                document.getElementById("hasil").value = total;
+            }
+        </script>
+    </body>
+</html>
