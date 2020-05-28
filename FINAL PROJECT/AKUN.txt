@@ -1,0 +1,5 @@
+Mahasiswa: username = 1708561077, pass = 55555555
+
+Dosen: username = 1231231231, pass = adi12345
+
+Admin: username = 1234567890, pass = admin123
